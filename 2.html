@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+        }
+        .navigate{
+            background-color: #2c3e50;
+            position:relative;
+        }
+        .nav{
+            display: flex;
+            list-style-type: none;
+            gap:15px;
+            justify-content: center;
+            padding:10px;
+            margin: 0;
+        }
+        .menu{
+            display:none;
+            color:white;
+            padding:10px 20px;
+        }
+        .nav a{
+            display:block;
+            color:white;
+            font-size: 20px;
+            text-decoration: none;
+            padding:10px 10px;
+        }
+        a:hover{
+            background-color:#34495e ;
+            border-radius: 5px;
+        }
+        @media(max-width:560px){
+            .menu{
+                display:block;
+                text-align: center;
+            }
+            .nav{
+                flex-direction: column;
+                display:none;
+                padding: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #34495e;
+            }
+            .nav li {
+                width:100%;
+                text-align: center;
+            }
+            .navigate:hover .nav,
+            .navigate:focus-within .nav{
+                display: flex;
+            }
+            .nav a {
+        padding: 15px;
+        border-bottom: 1px solid #34495e;
+        border-radius: 0;
+      }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navigate" tabindex="0">
+        <div class="menu">Менюшка</div>
+        <ul class="nav">
+            <li><a href="" target="_blank">Первая</a></li>
+             <li><a href="" target="_blank">Вторая</a></li>
+              <li><a href="" target="_blank">Третья</a></li>
+               <li><a href="" target="_blank">Четвертая</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
